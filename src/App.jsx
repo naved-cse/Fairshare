@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/layout/navbar"; // Updated import path
+import Navbar from "./components/layout/Navbar"; // Fixed capitalization here
 import Landing from "./pages/Landing";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Subscribe from "./pages/Subscribe";
 import Dashboard from "./pages/Dashboard";
-import Donate from "./pages/Donate"; // Imported Donate page
+import Donate from "./pages/Donate";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import AdminRoute from "./components/auth/AdminRoute";
 import Charities from "./pages/Charities";
@@ -23,8 +23,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/charities" element={<Charities />} />
-          <Route path="/donate" element={<Donate />} />{" "}
-          {/* Added Donate route */}
+          <Route path="/donate" element={<Donate />} />
           {/* Protected Routes */}
           <Route
             path="/subscribe"
