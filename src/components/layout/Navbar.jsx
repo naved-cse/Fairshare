@@ -27,7 +27,6 @@ export default function Navbar() {
         return;
       }
 
-      // Explicit check: only show admin if role is strictly 'admin'
       if (data && data.role === "admin") {
         setIsAdmin(true);
       } else {
@@ -64,7 +63,6 @@ export default function Navbar() {
                 <LayoutDashboard size={16} /> Dashboard
               </Link>
 
-              {/* Renders ONLY if role is explicitly 'admin' */}
               {isAdmin && (
                 <Link
                   to="/admin"
